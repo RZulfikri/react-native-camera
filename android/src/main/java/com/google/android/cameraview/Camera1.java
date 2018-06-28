@@ -227,9 +227,9 @@ class Camera1 extends CameraViewImpl implements MediaRecorder.OnInfoListener,
     @Override
     Set<AspectRatio> getSupportedAspectRatios() {
         SizeMap idealAspectRatios = mPreviewSizes;
-        for (AspectRatio aspectRatio : idealAspectRatios.ratios()) {
-            if (mPictureSizes.sizes(aspectRatio) == null) {
-                idealAspectRatios.remove(aspectRatio);
+        for (AspectRatio ratio : idealAspectRatios.ratios()) {
+            if (mPictureSizes.sizes(ratio) == null) {
+                idealAspectRatios.remove(ratio);
             }
         }
         return idealAspectRatios.ratios();
